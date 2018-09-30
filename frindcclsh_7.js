@@ -16,7 +16,8 @@ client.on('ready', () => {
  
 const prefix = "$"
 client.on('message', async msg => {
-    if (msg.author.bot) return undefined;
+	if(msg.author.id !== '488334414124810240') return;
+	if (msg.author.bot) return undefined;
    
     if (!msg.content.startsWith(prefix)) return undefined;
     const args = msg.content.split(' ');
